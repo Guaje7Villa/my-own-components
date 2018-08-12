@@ -13,60 +13,56 @@
     </Row>
 </template>
 <script>
-    export default {
-        data () {
-            return {
-                dataList: [],
-                model1: '',
-                model2: []
-            }
+export default {
+  data() {
+    return {
+      dataList: [],
+      model1: "",
+      model2: []
+    };
+  },
+  props: ["isMulti", "queryCond", "spanVal"],
+  methods: {
+    queryData() {
+      //调用后台接口返回数据
+      console.log("查询参数如下：");
+      console.log("queryCond:" + this.queryCond);
+      let queryCond = this.queryCond;
+      // util.ajaxMethodWidthParams(url, "post", p).then(response => {
+      //   console.log("返回数据如下：");
+      //   console.log(response.data);
+      // });
+
+      this.dataList = [
+        {
+          value: "New York",
+          label: "New York"
         },
-        props: ["isMulti","queryCond","spanVal"],
-        methods: {
-          queryData() {
-            //调用后台接口返回数据
-            console.log("查询参数如下：");
-            console.log("queryCond:"+this.queryCond);
-            let queryCond = this.queryCond;
-            // util.ajaxMethodWidthParams(url, "post", p).then(response => {
-            //   console.log("返回数据如下：");
-            //   console.log(response.data);
-            // });
-
-
-          
-
-            this.dataList = [
-                  {
-                      value: 'New York',
-                      label: 'New York'
-                  },
-                  {
-                      value: 'London',
-                      label: 'London'
-                  },
-                  {
-                      value: 'Sydney',
-                      label: 'Sydney'
-                  },
-                  {
-                      value: 'Ottawa',
-                      label: 'Ottawa'
-                  },
-                  {
-                      value: 'Paris',
-                      label: 'Paris'
-                  },
-                  {
-                      value: 'Canberra',
-                      label: 'Canberra'
-                  }
-            ]
-          
-          }
+        {
+          value: "London",
+          label: "London"
         },
-        created() {
-          this.queryData();
+        {
+          value: "Sydney",
+          label: "Sydney"
+        },
+        {
+          value: "Ottawa",
+          label: "Ottawa"
+        },
+        {
+          value: "Paris",
+          label: "Paris"
+        },
+        {
+          value: "Canberra",
+          label: "Canberra"
         }
+      ];
     }
+  },
+  created() {
+    this.queryData();
+  }
+};
 </script>
