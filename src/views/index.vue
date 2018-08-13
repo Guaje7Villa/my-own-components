@@ -18,43 +18,50 @@
 
 .index h2 {
   color: #666;
-  margin-bottom: 50px;
-}
-
-.index h2 p {
-  margin: 0 0 50px;
 }
 
 .index .ivu-row-flex {
   height: 100%;
 }
 
+ul {
+  margin-top: 30px;
+}
+
 ul > li {
   font-size: 18px;
   cursor: pointer;
+}
+
+.leftCol {
+  border-right: 1px solid #BBBBBB;
 }
 </style>
 <template>
     <div class="index">
         <Row type="flex" justify="center" align="middle">
-            <Col span="24">
+            <Col span="8" class="leftCol">
                 <h1>
-                    <img src="https://raw.githubusercontent.com/iview/iview/master/assets/logo.png">
+                    <img src="../assets/images/logo.png">
                 </h1>
                 <h2>
                     <p>Welcome to my own Components!</p>
                     <p>自定义组件封装</p>
-                    
-                    <!-- <Button type="ghost" @click="handleStart">Start iView</Button> -->
                 </h2>
                 <ul>
                   <li @click="gotoDetailPage">
-                    select component page
+                    Test
                   </li>
                   <li>
-                    <router-link tag="a" target="_blank" :to="{path:'./selectDemoIndex'}">自定义选择框</router-link>
+                    <router-link tag="a" target="_blank" :to="{path:'/blankPage'}">空白（在新页面打开）</router-link>
+                  </li>
+                  <li>
+                    <router-link to="/demoIndex">自定义选择框（在右侧打开）</router-link>
                   </li>
                 </ul>
+            </Col>
+            <Col span="16">
+               <router-view></router-view>
             </Col>
         </Row>
     </div>
@@ -62,15 +69,15 @@ ul > li {
 <script>
 export default {
   methods: {
-    // handleStart() {
-    //   this.$Modal.info({
-    //     title: "Bravo",
-    //     content: "Now, enjoy the convenience of iView."
-    //   });
-    // },
     gotoDetailPage() {
       console.log("go to select demo");
-      this.$router.push({ path: "./views/selectDemoIndex.vue" });
+
+      this.$Modal.info({
+        title: "Waiting...",
+        content: "建设中..."
+      });
+
+      // this.$router.push({ path: "./views/selectDemoIndex.vue" });
     }
   }
 };

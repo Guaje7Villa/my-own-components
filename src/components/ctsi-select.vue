@@ -1,5 +1,5 @@
 <template>
-    <Row style="margin-top:10px;">
+    <Row style="margin:10px 10px 0 10px;">
         <Col :span="spanVal" v-if="isMulti==false">
             <Select v-model="model1" filterable placeholder="单选">
                 <Option v-for="item in dataList" :value="item.value" :key="item.value">{{ item.label }}</Option>

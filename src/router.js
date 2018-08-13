@@ -1,18 +1,21 @@
 // let routeMap = new Map();
-import selectDemoIndex from './views/selectDemoIndex';
-// routeMap.set('selectDemo', selectDemoIndex)
+import selectDemo from './views/demoIndex';
+import blankPage from './views/blankPage';
+// routeMap.set('selectDemo', selectDemo)
+// routeMap.set('blankPage', blankPage)
 
 const routers = [{
     path: '/',
     meta: {
         title: '首页'
     },
-    component: (resolve) => require(['./views/index.vue'], resolve)
+    component: (resolve) => require(['./views/index.vue'], resolve),
+    children: [{
+        path: 'demoIndex',
+        component: selectDemo
+    }]
 }, {
-    path: '/selectDemoIndex',
-    meta: {
-        title: '自定义下拉框组件'
-    },
-    component: selectDemoIndex
+    path: './blankPage',
+    component: blankPage
 }];
 export default routers;
