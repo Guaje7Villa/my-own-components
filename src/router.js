@@ -1,6 +1,8 @@
 // let routeMap = new Map();
 import selectDemo from './views/demoIndex';
 import blankPage from './views/blankPage';
+import initCustProps from './views/initCustProps';
+import initCustProps1 from './views/initCustProps1';
 // routeMap.set('selectDemo', selectDemo)
 // routeMap.set('blankPage', blankPage)
 
@@ -13,6 +15,12 @@ const routers = [{
     children: [{
         path: 'demoIndex',
         component: selectDemo
+    }, {
+        path: 'initCustProps',
+        component: initCustProps
+    }, {
+        path: 'initCustProps1',
+        component: initCustProps1
     }]
 }, {
     path: './blankPage',

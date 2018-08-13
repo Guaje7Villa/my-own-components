@@ -56,7 +56,13 @@ ul > li {
                     <router-link tag="a" target="_blank" :to="{path:'/blankPage'}">空白（在新页面打开）</router-link>
                   </li>
                   <li>
-                    <router-link to="/demoIndex">自定义选择框（在右侧打开）</router-link>
+                    <router-link to="/demoIndex">自定义选择框（右侧显示）</router-link>
+                  </li>
+                  <li>
+                    <router-link to="/initCustProps">选择模态框（右侧显示）</router-link>
+                  </li>
+                   <li>
+                    <router-link to="/initCustProps1">选择模态框v2（右侧显示）</router-link>
                   </li>
                 </ul>
             </Col>

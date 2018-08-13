@@ -1,7 +1,7 @@
 <template>
     <div class="main"> 
       <h1>自定义组件示例
-        <Button @click="close">
+        <Button @click="close" size="small">
             <Icon type="close"></Icon>
             关闭
         </Button>
