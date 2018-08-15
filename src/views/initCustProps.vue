@@ -16,11 +16,11 @@
               @click.prevent.native="handleCheckAll1">全选 —— 业务能力</Checkbox>
         </div>
         <CheckboxGroup v-model="checkAllGroup1" @on-change="checkAllGroupChange1">
-            <Checkbox label="传统带宽型业务"></Checkbox><br>
-            <Checkbox label="云（云接入、云迁移、混合组网）"></Checkbox><br>
-            <Checkbox label="物联网"></Checkbox><br>
-            <Checkbox label="IDC"></Checkbox><br>
-            <Checkbox label="维护服务产品（客户云网整体安全托管服务产品、客户网络代维、重要通信保障、机房无忧、电路无忧、卫星应急服务、应急供电、云堤）"></Checkbox><br>
+            <Checkbox label="传统带宽型业务"></Checkbox>
+            <Checkbox label="云（云接入、云迁移、混合组网）"></Checkbox>
+            <Checkbox label="物联网"></Checkbox>
+            <Checkbox label="IDC"></Checkbox>
+            <Checkbox label="维护服务产品（客户云网整体安全托管服务产品、客户网络代维、重要通信保障、机房无忧、电路无忧、卫星应急服务、应急供电、云堤）"></Checkbox>
             <Checkbox label="其他"></Checkbox>
         </CheckboxGroup>
         <div style="border-bottom: 1px solid #e9e9e9;padding-bottom:6px;margin-bottom:6px;margin-top:30px;">
@@ -146,8 +146,10 @@ export default {
 };
 </script>
 
-<style scoped>
-
+<style>
+.ivu-modal {
+  width: 800px !important;
+}
 </style>
 
 
