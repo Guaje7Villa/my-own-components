@@ -1,11 +1,12 @@
 <template>
   <div>
     <h1>点击显示选择弹框</h1>
-    </br>
+    <br>
     <Button type="ghost" class="button is-primary" @click="show">显示</Button>
     <Button type="ghost" class="button is-primary" @click="goback">返回</Button>
     <CtsiModal
       :showModal="showModal"
+      @on-showModal-change="onShowModalChange"
     ></CtsiModal>
   </div>
 </template>
@@ -31,6 +32,9 @@ export default {
     },
     cancel() {
       this.$Message.info("关闭");
+    },
+    onShowModalChange(val) {
+      this.showModal = val; //4.外层调用组件方注册变更方法，将组件内的数据变更，同步到组件外的数据状态中
     }
   },
   components: {

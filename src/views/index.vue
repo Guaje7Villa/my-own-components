@@ -59,7 +59,7 @@ ul > li {
                     <router-link to="/demoIndex">自定义选择框（右侧显示）</router-link>
                   </li>
                   <li>
-                    <router-link to="/initCustProps">选择模态框（右侧显示）</router-link>
+                    <router-link to="/initCustProps">选择模态框v1（右侧显示）</router-link>
                   </li>
                    <li>
                     <router-link to="/initCustProps1">选择模态框v2（右侧显示）</router-link>
