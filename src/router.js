@@ -3,6 +3,7 @@ import selectDemo from './views/demoIndex';
 import blankPage from './views/blankPage';
 import initCustProps from './views/initCustProps';
 import initCustProps1 from './views/initCustProps1';
+import mxGraphIndex from './views/mxGraphIndex';
 // routeMap.set('selectDemo', selectDemo)
 // routeMap.set('blankPage', blankPage)
 
@@ -21,6 +22,9 @@ const routers = [{
     }, {
         path: 'initCustProps1',
         component: initCustProps1
+    }, {
+        path: './mxGraphIndex',
+        component: mxGraphIndex
     }]
 }, {
     path: './blankPage',

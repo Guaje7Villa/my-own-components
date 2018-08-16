@@ -65,7 +65,18 @@ export default {
       this.$router.go(-1);
     },
     ok() {
-      this.$Message.info("已选择");
+      let selectItems = "";
+      this.checkAllGroup1.forEach(element => {
+        selectItems += element + " ";
+      });
+      this.checkAllGroup2.forEach(element => {
+        selectItems += element + " ";
+      });
+      if (selectItems != "") {
+        this.$Message.info("已选择：" + selectItems);
+      } else {
+        this.$Message.info("未选择");
+      }
     },
     cancel() {
       this.$Message.info("关闭");
@@ -142,6 +153,10 @@ export default {
         this.checkAll2 = false;
       }
     }
+  },
+  mounted(){
+    //查询用户是否已经配置，未选择则
+    //this.isShowModal = true;
   }
 };
 </script>

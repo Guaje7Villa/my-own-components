@@ -53,7 +53,7 @@ ul > li {
                     Test
                   </li>
                   <li>
-                    <router-link tag="a" target="_blank" :to="{path:'/blankPage'}">空白（在新页面打开）</router-link>
+                    <router-link tag="a" target="_blank" :to="{path:'/blankPage'}">空白</router-link>
                   </li>
                   <li>
                     <router-link to="/demoIndex">自定义选择框（右侧显示）</router-link>
@@ -61,8 +61,11 @@ ul > li {
                   <li>
                     <router-link to="/initCustProps">选择模态框v1（右侧显示）</router-link>
                   </li>
-                   <li>
+                  <li>
                     <router-link to="/initCustProps1">选择模态框v2（右侧显示）</router-link>
+                  </li>
+                  <li>
+                    <router-link to="/mxGraphIndex">mxGraph（右侧显示）</router-link>
                   </li>
                 </ul>
             </Col>
