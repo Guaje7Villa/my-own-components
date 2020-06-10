@@ -14,13 +14,12 @@
     </div>
 </template>
 
-
 <script>
 export default {
   data () {
     return {
       words:[],               //字母数组push，pop的载体
-      str:"By Punk",          //str初始化
+      str:"By Guaje7Villa",          //str初始化
       letters:[],             //str分解后的字母数组
       order:1,                //表示当前是第几句话
     }
@@ -28,7 +27,7 @@ export default {
   watch:{                     //监听order值的变化，改变str的内容
     order(old,newV){
       if(this.order%4==1){
-        this.str="By Punk!"
+        this.str="By Guaje7Villa!"
       }
       else if(this.order%4==2){
         this.str="looking for a job. "
