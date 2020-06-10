@@ -2,8 +2,7 @@
 import selectDemo from './views/demoIndex';
 import blankPage from './views/blankPage';
 import initCustProps from './views/initCustProps';
-import initCustProps1 from './views/initCustProps1';
-import mxGraphIndex from './views/mxGraphIndex';
+// import mxGraphIndex from './views/initCustProps';
 // routeMap.set('selectDemo', selectDemo)
 // routeMap.set('blankPage', blankPage)
 
@@ -13,18 +12,13 @@ const routers = [{
         title: '首页'
     },
     component: (resolve) => require(['./views/index.vue'], resolve),
+    redirect: 'demoIndex',
     children: [{
         path: 'demoIndex',
         component: selectDemo
     }, {
         path: 'initCustProps',
         component: initCustProps
-    }, {
-        path: 'initCustProps1',
-        component: initCustProps1
-    }, {
-        path: './mxGraphIndex',
-        component: mxGraphIndex
     }]
 }, {
     path: './blankPage',

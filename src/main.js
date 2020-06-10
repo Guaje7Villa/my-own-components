@@ -13,14 +13,14 @@ import zhLocale from 'iview/src/locale/lang/zh-CN';
 import enLocale from 'iview/src/locale/lang/en-US';
 
 // var mxbasepath = 'javascript/src';
-import mxGraph from 'mxgraph/javascript/mxClient.min.js';
+// import mxGraph from 'mxgraph/javascript/mxClient.min.js';
 
 
 Vue.use(VueRouter);
 Vue.use(Vuex);
 Vue.use(VueI18n);
 Vue.use(iView);
-Vue.use(mxGraph);
+// Vue.use(mxGraph);
 
 // 自动设置语言
 const navLang = navigator.language;

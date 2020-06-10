@@ -1,3 +1,55 @@
+<template>
+    <div class="index">
+        <Row type="flex" justify="center" align="middle">
+            <Col span="8" class="leftCol">
+                <h1>
+                    <img src="../assets/images/logo.png">
+                </h1>
+                <h2>
+                    <p>Welcome to my own Components!</p>
+                    <p>自定义组件封装</p>
+                </h2>
+                <ul>
+                  <li @click="gotoDetailPage">
+                    Test
+                  </li>
+                  <li>
+                    <router-link tag="a" target="_blank" :to="{path:'/blankPage'}">CEM</router-link>
+                  </li>
+                  <li>
+                    <router-link to="/demoIndex">自定义选择框（右侧显示）</router-link>
+                  </li>
+                  <li>
+                    <router-link to="/initCustProps">选择模态框v1（右侧显示）</router-link>
+                  </li>
+                  <li>
+                    <!-- <router-link to="/mxGraphIndex">mxGraph（右侧显示）</router-link> -->
+                  </li>
+                </ul>
+            </Col>
+            <Col span="16">
+               <router-view></router-view>
+            </Col>
+        </Row>
+    </div>
+</template>
+<script>
+export default {
+  methods: {
+    gotoDetailPage() {
+      console.log("go to select demo");
+
+      this.$Modal.info({
+        title: "Waiting...",
+        content: "建设中..."
+      });
+
+      // this.$router.push({ path: "./views/selectDemoIndex.vue" });
+    }
+  }
+};
+</script>
+
 <style scoped>
 .index {
   width: 100%;
@@ -34,60 +86,6 @@ ul > li {
 }
 
 .leftCol {
-  border-right: 1px solid #BBBBBB;
+  border-right: 1px solid #bbbbbb;
 }
 </style>
-<template>
-    <div class="index">
-        <Row type="flex" justify="center" align="middle">
-            <Col span="8" class="leftCol">
-                <h1>
-                    <img src="../assets/images/logo.png">
-                </h1>
-                <h2>
-                    <p>Welcome to my own Components!</p>
-                    <p>自定义组件封装</p>
-                </h2>
-                <ul>
-                  <li @click="gotoDetailPage">
-                    Test
-                  </li>
-                  <li>
-                    <router-link tag="a" target="_blank" :to="{path:'/blankPage'}">空白</router-link>
-                  </li>
-                  <li>
-                    <router-link to="/demoIndex">自定义选择框（右侧显示）</router-link>
-                  </li>
-                  <li>
-                    <router-link to="/initCustProps">选择模态框v1（右侧显示）</router-link>
-                  </li>
-                  <li>
-                    <router-link to="/initCustProps1">选择模态框v2（右侧显示）</router-link>
-                  </li>
-                  <li>
-                    <router-link to="/mxGraphIndex">mxGraph（右侧显示）</router-link>
-                  </li>
-                </ul>
-            </Col>
-            <Col span="16">
-               <router-view></router-view>
-            </Col>
-        </Row>
-    </div>
-</template>
-<script>
-export default {
-  methods: {
-    gotoDetailPage() {
-      console.log("go to select demo");
-
-      this.$Modal.info({
-        title: "Waiting...",
-        content: "建设中..."
-      });
-
-      // this.$router.push({ path: "./views/selectDemoIndex.vue" });
-    }
-  }
-};
-</script>

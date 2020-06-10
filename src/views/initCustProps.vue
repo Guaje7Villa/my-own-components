@@ -73,10 +73,12 @@ export default {
         selectItems += element + " ";
       });
       if (selectItems != "") {
-        this.$Message.info("已选择：" + selectItems);
+        this.$Message.success("已选择：" + selectItems);
       } else {
         this.$Message.info("未选择");
       }
+
+      //保存处理selectItems
     },
     cancel() {
       this.$Message.info("关闭");
@@ -156,7 +158,7 @@ export default {
   },
   mounted(){
     //查询用户是否已经配置，未选择则
-    //this.isShowModal = true;
+    this.isShowModal = true;
   }
 };
 </script>
